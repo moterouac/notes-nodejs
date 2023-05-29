@@ -3,8 +3,8 @@ const userService = require('../services/user-service');
 module.exports = {
     getUser: async (req, res, next) => {
       try {
-        const uid = req.query.uid;
-        const user = await userService.getUser(uid);
+        const email = req.query.email;
+        const user = await userService.getUserByemail(email);
         return res.status(200).json(user);
       } catch (error) {
         next(error);

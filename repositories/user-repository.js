@@ -21,8 +21,13 @@ const getByUidOrAuthId = async (uid, authId) => {
     }
   };
 
+const getUserByEmail = async(email) => {
+    return UserDB.findOne({ email: email });
+}
+
 
 module.exports = {
     create,
-    getByUidOrAuthId
+    getByUidOrAuthId,
+    getUserByEmail
 }
