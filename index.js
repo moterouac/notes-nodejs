@@ -13,4 +13,4 @@ app.get('/', (req,res) => {
 })
 
 
-app.use(process.env.API_VERSION_ROUTE, require("./routes/user-routes"));
+app.use(process.env.API_VERSION_ROUTE, require("./config/routes/user-routes"));
